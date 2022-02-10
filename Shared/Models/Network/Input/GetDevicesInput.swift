@@ -5,4 +5,11 @@
 //  Created by Alexandr Booharin on 10.02.2022.
 //
 
-import Foundation
+struct GetDevicesInput: Codable {
+    init(meta: ServerMetaParameters) {
+        self.meta = meta
+    }
+    
+    /// Meta object registration request.
+    let meta: ServerMetaParameters
+}
