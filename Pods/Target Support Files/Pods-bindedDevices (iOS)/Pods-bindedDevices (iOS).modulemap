@@ -1,0 +1,6 @@
+module Pods_bindedDevices__iOS_ {
+  umbrella header "Pods-bindedDevices (iOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}

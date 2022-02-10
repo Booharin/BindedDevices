@@ -5,4 +5,8 @@
 //  Created by Alexandr Booharin on 10.02.2022.
 //
 
-import Foundation
+struct BindedDevicesResponse: Decodable {
+    let status: String?
+    let data: [BindedDeviceOutput]?
+    let actualTimestamp: Int?
+}
