@@ -6,6 +6,7 @@
 //
 
 struct BindedDeviceOutput: Decodable {
+    let token: String?
     let agent: Agent?
 }
 

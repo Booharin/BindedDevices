@@ -13,8 +13,10 @@
 		3341FE5127B581060054A695 /* BindedDevicesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341FE5027B581060054A695 /* BindedDevicesResponse.swift */; };
 		3341FE5327B581F50054A695 /* SystemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341FE5227B581F50054A695 /* SystemError.swift */; };
 		3341FE5627B5886C0054A695 /* GetDeviceBindingList.json in Resources */ = {isa = PBXBuildFile; fileRef = 3341FE5527B5886C0054A695 /* GetDeviceBindingList.json */; };
-		335AA74E27B4F8DB0070A200 /* BindedDevice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335AA74C27B4F8DB0070A200 /* BindedDevice+CoreDataClass.swift */; };
-		335AA74F27B4F8DB0070A200 /* BindedDevice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335AA74D27B4F8DB0070A200 /* BindedDevice+CoreDataProperties.swift */; };
+		335889E527B8F4310057E338 /* BindedDevice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335889E327B8F4310057E338 /* BindedDevice+CoreDataProperties.swift */; };
+		335889E627B8F4310057E338 /* BindedDevice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335889E427B8F4310057E338 /* BindedDevice+CoreDataClass.swift */; };
+		335889E827B8F4B90057E338 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335889E727B8F4B90057E338 /* CoreDataManager.swift */; };
+		335889EA27B8F4F00057E338 /* CoreDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335889E927B8F4F00057E338 /* CoreDataManagerProtocol.swift */; };
 		335AA75227B558AD0070A200 /* BindedDevicesNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335AA75127B558AD0070A200 /* BindedDevicesNetworkService.swift */; };
 		335AA75427B558BE0070A200 /* BindedDevicesNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335AA75327B558BE0070A200 /* BindedDevicesNetworkServiceProtocol.swift */; };
 		335AA75927B55E620070A200 /* BindedDevicesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335AA75827B55E620070A200 /* BindedDevicesTarget.swift */; };
@@ -59,8 +61,10 @@
 		3341FE5027B581060054A695 /* BindedDevicesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindedDevicesResponse.swift; sourceTree = "<group>"; };
 		3341FE5227B581F50054A695 /* SystemError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemError.swift; sourceTree = "<group>"; };
 		3341FE5527B5886C0054A695 /* GetDeviceBindingList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetDeviceBindingList.json; sourceTree = "<group>"; };
-		335AA74C27B4F8DB0070A200 /* BindedDevice+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BindedDevice+CoreDataClass.swift"; sourceTree = "<group>"; };
-		335AA74D27B4F8DB0070A200 /* BindedDevice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BindedDevice+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		335889E327B8F4310057E338 /* BindedDevice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BindedDevice+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		335889E427B8F4310057E338 /* BindedDevice+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BindedDevice+CoreDataClass.swift"; sourceTree = "<group>"; };
+		335889E727B8F4B90057E338 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		335889E927B8F4F00057E338 /* CoreDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerProtocol.swift; sourceTree = "<group>"; };
 		335AA75127B558AD0070A200 /* BindedDevicesNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindedDevicesNetworkService.swift; sourceTree = "<group>"; };
 		335AA75327B558BE0070A200 /* BindedDevicesNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindedDevicesNetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		335AA75827B55E620070A200 /* BindedDevicesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindedDevicesTarget.swift; sourceTree = "<group>"; };
@@ -154,11 +158,21 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		335889DA27B8F1C90057E338 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				335889E427B8F4310057E338 /* BindedDevice+CoreDataClass.swift */,
+				335889E327B8F4310057E338 /* BindedDevice+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		335AA74727B4F8860070A200 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				335AA74C27B4F8DB0070A200 /* BindedDevice+CoreDataClass.swift */,
-				335AA74D27B4F8DB0070A200 /* BindedDevice+CoreDataProperties.swift */,
+				335889E727B8F4B90057E338 /* CoreDataManager.swift */,
+				335889E927B8F4F00057E338 /* CoreDataManagerProtocol.swift */,
+				335889DA27B8F1C90057E338 /* Models */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -518,12 +532,13 @@
 				3341FE5127B581060054A695 /* BindedDevicesResponse.swift in Sources */,
 				335AA75B27B575090070A200 /* BaseURL.swift in Sources */,
 				33AB88A327B3E83200BCD17E /* BindedDevicesRouter.swift in Sources */,
+				335889E627B8F4310057E338 /* BindedDevice+CoreDataClass.swift in Sources */,
 				33AB887B27B3D0F900BCD17E /* bindedDevices.xcdatamodeld in Sources */,
-				335AA74F27B4F8DB0070A200 /* BindedDevice+CoreDataProperties.swift in Sources */,
 				335AA75227B558AD0070A200 /* BindedDevicesNetworkService.swift in Sources */,
 				33AB88A527B3E8EB00BCD17E /* BindedDevicesView.swift in Sources */,
 				335AA76027B5764E0070A200 /* ServerMetaParameters.swift in Sources */,
 				33AB88AA27B3ECF200BCD17E /* BindedDevicesRepository.swift in Sources */,
+				335889E527B8F4310057E338 /* BindedDevice+CoreDataProperties.swift in Sources */,
 				3341FE4F27B5806C0054A695 /* MoyaProvider+Reactive.swift in Sources */,
 				3341FE4C27B577D90054A695 /* RevokeDeviceInput.swift in Sources */,
 				33AB88B127B3F21400BCD17E /* BindedDeviceOutput.swift in Sources */,
@@ -531,12 +546,13 @@
 				33AB88A127B3E6F500BCD17E /* BindedDevicesProtocols.swift in Sources */,
 				33AB889A27B3E5F100BCD17E /* BindedDevicesAssembly.swift in Sources */,
 				33AB889F27B3E6CF00BCD17E /* BindedDevicesPresenter.swift in Sources */,
+				335889EA27B8F4F00057E338 /* CoreDataManagerProtocol.swift in Sources */,
 				3341FE5327B581F50054A695 /* SystemError.swift in Sources */,
 				33AB887D27B3D0F900BCD17E /* bindedDevicesApp.swift in Sources */,
-				335AA74E27B4F8DB0070A200 /* BindedDevice+CoreDataClass.swift in Sources */,
 				33AB889627B3D71C00BCD17E /* BindedDevicesInteractor.swift in Sources */,
 				3341FE4A27B577860054A695 /* GetDevicesInput.swift in Sources */,
 				33AB88BB27B3FBA200BCD17E /* BindedDevicesLocalServiceProtocol.swift in Sources */,
+				335889E827B8F4B90057E338 /* CoreDataManager.swift in Sources */,
 				33AB88B927B3FB8800BCD17E /* BindedDevicesLocalService.swift in Sources */,
 				33AB88B327B3F36100BCD17E /* BindedDeviceItem.swift in Sources */,
 				33AB88AC27B3ED0000BCD17E /* BindedDevicesRepositoryProtocol.swift in Sources */,
